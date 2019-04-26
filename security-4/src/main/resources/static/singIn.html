@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页</title>
+</head>
+<body>
+表单登录
+<form action="/login" method="POST">
+<table>
+    <tr>
+        <td>username：</td><td><input name="username"></td>
+    </tr>
+    <tr>
+        <td>password：</td><td><input name="password"></td>
+    </tr>
+    <tr>
+        <td>imageCode：</td><td><input name="imageCode"><img src="/test/getverifycode/001"><input name="deviceId" value="001"></td>
+    </tr>
+    <tr>
+        <td><input name="_csrf" type="hidden" value="48f61422-bd2f-4120-97fe-97a6b185ed71" /></td>
+        <td><button type="submit">submit</button></td>
+    </tr>
+</table>
+</form>
+手机号登录
+<form action="/auth/mobile" method="POST">
+    <table>
+        <tr>
+            <td>mobile：</td><td><input name="mobile"></td>
+        </tr>
+        <tr>
+            <td>smsCode：</td><td><input name="smsCode"><input name="deviceId" value="002"></td>
+        </tr>
+        <tr>
+            <td><input name="_csrf" type="hidden" value="48f61422-bd2f-4120-97fe-97a6b185ed71" /></td>
+            <td><button type="submit">submit</button></td>
+        </tr>
+    </table>
+</form>
+
+<a href="/qqLogin/qq">QQ登录</a>
+<a href="/qqLogin/qq">QQ登录</a>
+</body>
+</html>
