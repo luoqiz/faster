@@ -62,9 +62,9 @@ public class SocialConfig extends SocialConfigurerAdapter {
     @Bean
     public SpringSocialConfigurer systemSpringSocialConfigurer() {
         //自定义过滤器拦截路径
-//        String filterProcessesUrl = systemSecurityProperties.getSocial().getFilterProcessesUrl();
-//        SystemSpringSocialConfigurer systemSpringSocialConfigurer=  new SystemSpringSocialConfigurer(filterProcessesUrl);
-//        return systemSpringSocialConfigurer;
-        return new SpringSocialConfigurer();
+        String filterProcessesUrl = systemSecurityProperties.getSocial().getFilterProcessesUrl();
+        SystemSpringSocialConfigurer systemSpringSocialConfigurer=  new SystemSpringSocialConfigurer(filterProcessesUrl);
+        return systemSpringSocialConfigurer;
+//        return new SpringSocialConfigurer();
     }
 }
